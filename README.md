@@ -9,12 +9,14 @@ Events library for custom WME scripts
 ## Events
 
 * `none.wme` – on `document`, when nothing chosen
-* `node.wme` – on `document`, when chosen some node for edit
-* `segment.wme` – on `document`, when chosen some segment for edit
-* `landmark.wme` – on `document`, when chosen some place for edit
-* `landmark-collection.wme` – on `document`, when chosen more than one place
-
-
+* `node.wme` – on `document`, when chosen node for edit
+* `nodes.wme` – on `document`, when chosen more than one node
+* `segment.wme` – on `document`, when chosen segment for edit
+* `segments.wme` – on `document`, when chosen more than one segment
+* `venue.wme` – on `document`, when chosen place for edit
+* `venues.wme` – on `document`, when chosen more than one place
+* `point.wme` – on `document`, when chosen point place for edit
+* `residential.wme` – on `document`, when chosen residential place for edit
 
 ## Links
 Author homepage: http://anton.shevchuk.name/  
