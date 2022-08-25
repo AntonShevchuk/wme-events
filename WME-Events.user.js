@@ -24,7 +24,6 @@
   let $document = $(document)
 
   $document
-    .on('bootstrap.wme', init)
     .on('segment.wme', logger)
     .on('segments.wme', logger)
     .on('node.wme', logger)
@@ -33,6 +32,8 @@
     .on('venues.wme', logger)
     .on('point.wme', logger)
     .on('residential.wme', logger)
+
+  init();
 
   function init() {
     // Initial handler for fire events
@@ -91,6 +92,5 @@
     let dom = document.getElementById('edit-panel').querySelector(selector)
     $document.trigger(event, [dom, models])
   }
-
 
 })(window.jQuery);
