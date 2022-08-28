@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME Events
 // @namespace    https://greasyfork.org/users/227648-anton-shevchuk
-// @version      0.0.1
+// @version      0.0.2
 // @description  Events for custom Waze Map Editor scripts
 // @license      MIT License
 // @match        https://www.waze.com/editor*
@@ -31,6 +31,7 @@
     .on('venue.wme', log)
     .on('venues.wme', log)
     .on('point.wme', log)
+    .on('place.wme', log)
     .on('residential.wme', log)
 
   init() // be carefully, this script should be load only by WME Bootstrap
@@ -73,6 +74,8 @@
         trigger('venue.wme', 'venue-edit-general', model)
         if (model.isPoint()) {
           trigger('point.wme', 'venue-edit-general', model)
+        } else {
+          trigger('place.wme', 'venue-edit-general', model)
         }
         if (model.isResidential()) {
           trigger('residential.wme', 'venue-edit-general', model)
